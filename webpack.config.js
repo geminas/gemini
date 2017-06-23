@@ -16,7 +16,7 @@ module.exports = {
             "lib": path.resolve('./src/lib'),
             "conf": path.resolve('./src/conf'),
             "components": path.resolve('./src/components'),
-            "bower_components": path.resolve('./src/bower_components'),
+            "bower_components": path.resolve('./node_modules/'),
             "jquery": "bower_components/jquery/dist/jquery.js",
             // // for amd; bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js
             "moment": "bower_components/moment/moment.js",
@@ -28,7 +28,7 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
-            loader: 'babel',
+            loader: 'babel-loader',
             query:
               {
                 presets:['react','es2015']
